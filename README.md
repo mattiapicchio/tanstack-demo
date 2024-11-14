@@ -1,4 +1,4 @@
-# Reddish
+# Vite React TS TW Starter
 
 #### Table of Contents
 
@@ -41,13 +41,13 @@ npm run start
 
 ### Folder Structure
 
-``` b
+```b
 ../src
       |..
       |
       |-components : place components here.
       |
-      |-connectivity: this is where you define network/api requests.
+      |-api: this is where you define network/api requests.
       |
       |-helpers: hooks, helper methods that are not utils, restrict functions, etc
       |

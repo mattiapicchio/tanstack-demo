@@ -47,7 +47,7 @@ npm run start
       |
       |-components : place components here.
       |
-      |-api: this is where you define network/api requests.
+      |-connectivity: this is where you define network/api requests.
       |
       |-helpers: hooks, helper methods that are not utils, restrict functions, etc
       |
@@ -55,11 +55,9 @@ npm run start
       |
       |-features: all the code for features in one single place. E.g., all the code for authentication can be in its own subfolder. Can be seen as a mini version of the /src folder for each feature.
       |
-      |-shared/
-              |
-              |-data: Place shared data like constants, strings, json, etc
-              |
-              |-lib: folder for third party libraries (facade pattern)
+      |-data: Place shared data like constants, strings, json, etc
+      |
+      |-lib: folder for third party libraries (facade pattern)
       |
       |-utils: only utility functions, small and simple pure functions.
       |

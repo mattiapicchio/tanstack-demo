@@ -6,7 +6,7 @@
 - [Development server](#development-server)
 - [Production server](#production-server)
 - [Folder Structure](#folder-structure)
-- [Linting/Formatting](#linting-formatting)
+- [Linting-Formatting](#linting-formatting)
 - [Documentation](#documentation)
 
 ## Setup
@@ -66,7 +66,7 @@ npm run start
       |..
 ```
 
-## Linting/Formatting
+## Linting-Formatting
 
 Make sure you have Prettier and ESLint working in your editor and enable format on save.
 

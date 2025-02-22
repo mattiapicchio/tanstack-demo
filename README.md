@@ -1,6 +1,6 @@
 # Vite React TS TW Starter
 
-#### Table of Contents
+## Table of Contents
 
 - [Setup](#setup)
 - [Development server](#development-server)
@@ -9,7 +9,7 @@
 - [Linting/Formatting](#linting-formatting)
 - [Documentation](#documentation)
 
-### Setup
+## Setup
 
 Install the Node version listed in [`.nvmrc`](.nvmrc).
 
@@ -39,7 +39,7 @@ Locally preview production build:
 npm run start
 ```
 
-### Folder Structure
+## Folder Structure
 
 ```b
 ../src
@@ -66,7 +66,7 @@ npm run start
       |..
 ```
 
-### Linting/Formatting
+## Linting/Formatting
 
 Make sure you have Prettier and ESLint working in your editor and enable format on save.
 
@@ -76,8 +76,14 @@ Run all linting/formatting:
 npm run lint
 ```
 
-### Documentation
+## Documentation
 
 [React](https://react.dev/)
 
 [Tailwind](https://v2.tailwindcss.com/docs)
+
+[Tanstack](https://tanstack.com/)
+
+[Tanstack Router](https://tanstack.com/router/latest)
+
+[Tanstack Query](https://tanstack.com/query/latest)

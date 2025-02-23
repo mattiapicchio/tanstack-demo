@@ -1,0 +1,37 @@
+{
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
+  "editor.semanticHighlighting.enabled": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "*.mdx": "markdown"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "tailwindCSS.classAttributes": [
+    "className"
+  ],
+  "editor.colorDecorators": true,
+  "tailwindCSS.showPixelEquivalents": true,
+  "tailwindCSS.suggestions": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "gitlens.advanced.blame.delayAfterEdit": 3000,
+  "gitblame.inlineMessageEnabled": true,
+  "files.readonlyInclude": {
+    "**/routeTree.gen.ts": true
+  },
+  "files.watcherExclude": {
+    "**/routeTree.gen.ts": true
+  },
+  "search.exclude": {
+    "**/routeTree.gen.ts": true
+  }
+}

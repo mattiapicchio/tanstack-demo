@@ -1,13 +1,31 @@
-# Vite React TS TW Starter
+# Tanstack Query Demo
 
 ## Table of Contents
 
+- [Project Description](#project-description)
 - [Setup](#setup)
 - [Development server](#development-server)
 - [Production server](#production-server)
 - [Folder Structure](#folder-structure)
 - [Linting-Formatting](#linting-formatting)
 - [Documentation](#documentation)
+
+## Project Description
+
+A demo project focused on implementing [TanStack Query](https://tanstack.com/query/latest).
+
+Features:
+
+- API fetch strategy
+- Client side data fetching
+- ... WIP
+
+The project is built with:
+
+- React + TypeScript
+- Tailwind CSS
+- Vite
+- [TanStack Router](https://tanstack.com/router/latest)
 
 ## Setup
 

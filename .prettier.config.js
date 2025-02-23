@@ -1,7 +1,7 @@
 const config = {
   trailingComma: "all",
   tabWidth: 2,
-  semi: false,
+  semi: true,
   singleQuote: true,
   tabWidth: 2,
   printWidth: 100,

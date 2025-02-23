@@ -68,17 +68,15 @@ VITE_GITHUB_TOKEN=your_github_token # Optional, needed to avoid rate limiting
 
 ## Folder Structure
 
-```b
+```plain
 ../src
       |..
       |
-      |-components : place components here.
+      |-components : features indipendent components.
       |
-      |-connectivity: this is where you define network/api requests.
+      |-connectivity: logic for network/api requests.
       |
       |-helpers: hooks, helper methods that are not utils, restrict functions, etc
-      |
-      |-pages: place all the pages here.
       |
       |-features: all the code for features in one single place. E.g., all the code for authentication can be in its own subfolder. Can be seen as a mini version of the /src folder for each feature.
       |
@@ -105,7 +103,7 @@ npm run lint
 
 [React](https://react.dev/)
 
-[Tailwind](https://v2.tailwindcss.com/docs)
+[Tailwind](https://tailwindcss.com/docs)
 
 [Tanstack](https://tanstack.com/)
 

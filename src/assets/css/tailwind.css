@@ -13,6 +13,10 @@
 
   html {
     -webkit-tap-highlight-color: transparent; /* remove Android highlights taps on links */
-    @apply text-white antialiased bg-black-nightshade;
+    @apply text-white antialiased bg-black-rich;
+  }
+
+  a {
+    @apply text-voltgreen underline hover:text-sunflare;
   }
 }

@@ -1,13 +1,13 @@
 export const COLORS = {
   gray: {
-    DEFAULT: "#878A8C",
-    dark: "#5A5A5A",
-    light: "#FF4500",
+    DEFAULT: "#707174",
+    dark: "#1E1E1E",
+    soft: "#CCCCCC",
   },
   black: {
     DEFAULT: "#000",
-    rich: "#040307",
-    coal: "#1E1E1E",
+    rich: "#09090B",
+    coal: "#18181B",
     nightshade: "#1A1A1A",
   },
   current: "currentColor",

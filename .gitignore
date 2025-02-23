@@ -75,9 +75,10 @@ out/
 .idea/httpRequests
 
 ### VisualStudioCode Template ###
-**/.vscode/*
 .vscode/*
+!.vscode/settings.json
 !.vscode/extensions.json
+!.vscode/launch.json
 
 # Local History for Visual Studio Code
 .history/

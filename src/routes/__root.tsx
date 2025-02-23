@@ -1,3 +1,4 @@
+import "@/assets/css/tailwind.css";
 import { NavBar } from "@/components/NavBar";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { createRootRoute, Outlet } from "@tanstack/react-router";

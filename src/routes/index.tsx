@@ -15,5 +15,5 @@ function Index() {
 
   console.log("data", data);
 
-  return <div className="p-2">FOO</div>;
+  return <div className="p-2 text-red-500">FOO</div>;
 }

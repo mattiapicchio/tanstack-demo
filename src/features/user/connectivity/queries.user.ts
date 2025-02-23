@@ -1,6 +1,6 @@
 import { QUERY_KEY } from "@/utils/queryKeys";
 import { useQuery } from "@tanstack/react-query";
-import { getOctocatRepos, getOctocatUser } from "./api.octocat";
+import { getOctocatRepos, getOctocatUser } from "./api.user";
 
 export const useQueryOctocatUser = () =>
   useQuery({

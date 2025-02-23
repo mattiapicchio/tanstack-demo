@@ -1,5 +1,5 @@
 // minimum interface principle
-export interface GetOctocatUserResponse {
+export interface User {
   id: string;
   name: string;
   html_url: string;
@@ -10,7 +10,7 @@ export interface GetOctocatUserResponse {
   followers: number;
 }
 
-export type GetOctocatReposResponse = GithubRepo[];
+export type Repos = GithubRepo[];
 
 type GithubRepo = {
   name: string;

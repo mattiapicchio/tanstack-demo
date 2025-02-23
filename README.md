@@ -39,6 +39,15 @@ Locally preview production build:
 npm run start
 ```
 
+### Environment Variables
+
+Create a `.env` file in the root of the project and add the following variables:
+
+```sh
+VITE_API_URL=https://api.github.com/users/ # Required
+VITE_GITHUB_TOKEN=your_github_token # Optional, needed to avoid rate limiting
+```
+
 ## Folder Structure
 
 ```b

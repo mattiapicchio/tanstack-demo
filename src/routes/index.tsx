@@ -1,19 +1,21 @@
-import { useQueryOctocatUser } from "@/features/octocat/connectivity/queries.octocat";
+import { UserCard } from "@/features/user/components/UserCard";
+import { useQueryOctocatUser } from "@/features/user/connectivity/queries.user";
 import { createFileRoute } from "@tanstack/react-router";
 
-// TODO: can it be refactored?
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
 function Index() {
-  const { isPending, error, data } = useQueryOctocatUser();
+  const { isPending, error, data: user } = useQueryOctocatUser();
 
   if (isPending) return "Loading...";
 
   if (error) return "An error has occurred: " + error.message;
 
-  console.log("data", data);
-
-  return <div className="p-2 text-red-500">FOO</div>;
+  return (
+    <div className="container mx-auto mt-12">
+      <UserCard user={user} />
+    </div>
+  );
 }

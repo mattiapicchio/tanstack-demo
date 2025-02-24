@@ -9,8 +9,8 @@ export const Route = createRootRoute({
     <>
       <NavBar />
       <Outlet />
-      <ReactQueryDevtools initialIsOpen={false} />
-      <TanStackRouterDevtools />
+      <ReactQueryDevtools buttonPosition="top-right" initialIsOpen={false} />
+      <TanStackRouterDevtools position="bottom-right" />
     </>
   ),
 });

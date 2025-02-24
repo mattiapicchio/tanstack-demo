@@ -1,3 +1,4 @@
+import { ErrorPage } from "@/components/layout/ErrorPage";
 import FullscreenLoader from "@/components/layout/FullscreenLoader";
 import { Listing } from "@/components/layout/Listing";
 import { RepoTeaser } from "@/features/repo/component/RepoTeaser";
@@ -14,7 +15,7 @@ function ReposPage() {
 
   if (isPending) return <FullscreenLoader />;
 
-  if (error) return "An error has occurred: " + error.message;
+  if (error) return <ErrorPage error={error} />;
 
   return (
     <div className="container mx-auto mt-12">

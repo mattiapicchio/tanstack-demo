@@ -1,3 +1,4 @@
+import { ErrorPage } from "@/components/layout/ErrorPage";
 import FullscreenLoader from "@/components/layout/FullscreenLoader";
 import { UserCard } from "@/features/user/components/UserCard";
 import { useQueryOctocatUser } from "@/features/user/connectivity/queries.user";
@@ -13,7 +14,7 @@ function Index() {
 
   if (isPending) return <FullscreenLoader />;
 
-  if (error) return "An error has occurred: " + error.message;
+  if (error) return <ErrorPage error={error} />;
 
   return (
     <div className="container mx-auto mt-12">

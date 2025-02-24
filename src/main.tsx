@@ -2,11 +2,24 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
+import { minutes } from "./utils/timeUtils";
 
 // Import the generated route tree
 import { routeTree } from "./routeTree.gen";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      // The duration until a query transitions from fresh to stale. As long as the query is fresh, data will always be read from the cache only. With SSR, we usually want to set some default staleTime above 0 to avoid refetching immediately on the client. --> https://tanstack.com/query/v5/docs/framework/react/guides/caching
+      staleTime: minutes(1),
+      // Queries that fail are silently retried 3 times, with exponential backoff delay
+      retry: 3,
+      refetchOnWindowFocus: false,
+      // The duration until inactive queries will be removed from the cache and garbage collected.
+      gcTime: minutes(5),
+    },
+  },
+});
 
 // Set up a Router instance
 const router = createRouter({

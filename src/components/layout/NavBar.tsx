@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 
 export const NavBar = () => {
   return (
-    <nav className="p-2 flex gap-2 ">
+    <nav className="p-3 flex gap-4 text-xl border-b border-voltgreen">
       <Link
         to={ROUTE_KEY.HOME}
         className="[&.active]:text-voltgreen no-underline text-white"

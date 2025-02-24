@@ -9,13 +9,3 @@ export interface User {
   public_repos: number;
   followers: number;
 }
-
-export type Repos = GithubRepo[];
-
-type GithubRepo = {
-  name: string;
-  html_url: string;
-  description: string;
-  stargazers_count: number;
-  watchers_count: number;
-};

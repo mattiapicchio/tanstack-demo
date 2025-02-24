@@ -1,8 +1,9 @@
 import { UserCard } from "@/features/user/components/UserCard";
 import { useQueryOctocatUser } from "@/features/user/connectivity/queries.user";
+import { ROUTE_KEY } from "@/utils/routerUtils";
 import { createFileRoute } from "@tanstack/react-router";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute(ROUTE_KEY.HOME)({
   component: Index,
 });
 

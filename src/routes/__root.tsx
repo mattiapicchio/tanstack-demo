@@ -1,5 +1,6 @@
 import "@/assets/css/tailwind.css";
-import { NavBar } from "@/components/NavBar";
+import { NavBar } from "@/components/layout/NavBar";
+import { NotFound } from "@/components/layout/NotFound";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { createRootRoute, Outlet } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
@@ -13,4 +14,5 @@ export const Route = createRootRoute({
       <TanStackRouterDevtools position="bottom-right" />
     </>
   ),
+  notFoundComponent: () => <NotFound />,
 });

@@ -27,6 +27,7 @@ The project is built with:
 - TypeScript
 - Tailwind CSS
 - Vite
+- [TanStack Query](https://tanstack.com/query/latest)
 - [TanStack Router](https://tanstack.com/router/latest)
 
 ## Setup

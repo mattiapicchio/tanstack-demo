@@ -1,6 +1,7 @@
 import js from "@eslint/js";
 import pluginQuery from "@tanstack/eslint-plugin-query";
 import eslintPluginPrettier from "eslint-plugin-prettier/recommended";
+import reactCompiler from "eslint-plugin-react-compiler";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import globals from "globals";
@@ -24,9 +25,11 @@ export default tseslint
         "react-hooks": reactHooks,
         "react-refresh": reactRefresh,
         "@tanstack/query": pluginQuery,
+        "react-compiler": reactCompiler,
       },
       rules: {
         ...reactHooks.configs.recommended.rules,
+        "react-compiler/react-compiler": "error",
         "react-refresh/only-export-components": [
           "warn",
           { allowConstantExport: true },

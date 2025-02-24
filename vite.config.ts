@@ -1,9 +1,11 @@
 import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
-import viteReact from "@vitejs/plugin-react";
+import react from "@vitejs/plugin-react";
 import path from "path";
 import { defineConfig } from "vite";
 
 const root = path.resolve(__dirname, "./src");
+
+const ReactCompilerConfig = { target: "19" };
 
 export default defineConfig({
   resolve: {
@@ -13,7 +15,12 @@ export default defineConfig({
   },
   plugins: [
     TanStackRouterVite({ autoCodeSplitting: true }),
-    viteReact(),
+    react({
+      babel: {
+        plugins: [["babel-plugin-react-compiler", ReactCompilerConfig]],
+      },
+    }),
+    // React(),
     // ...,
   ],
   server: {

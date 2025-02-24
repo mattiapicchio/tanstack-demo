@@ -18,6 +18,7 @@ Features:
 
 - API fetch strategy
 - Client side data fetching
+- React Compiler
 - ... WIP
 
 The project is built with:

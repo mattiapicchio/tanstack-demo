@@ -1,5 +1,4 @@
 export interface GetBaseRequestConfig {
-  accessToken?: string;
   contentType?: string;
 }
 

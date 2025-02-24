@@ -1,7 +1,8 @@
 export type Repos = GithubRepo[];
 
-type GithubRepo = {
+export type GithubRepo = {
   name: string;
+  id: string;
   html_url: string;
   description: string;
   stargazers_count: number;

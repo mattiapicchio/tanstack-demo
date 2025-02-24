@@ -5,7 +5,7 @@ const apiUrl = import.meta.env.VITE_API_URL;
 
 /*
   BASIC FACADE PATTERN SETUP FOR API FETCH STRATEGY
-  it can be expanded with project specific error handling, errors parser, cutom typed errors, project specific request config headers, etc...
+  it can be expanded with project specific error handling, errors parser, custom typed errors, project specific request config headers, etc...
 */
 
 export async function fetchRequest<TResponse>(

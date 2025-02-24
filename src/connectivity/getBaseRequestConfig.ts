@@ -17,7 +17,6 @@ export function getBaseRequestConfig({
       ...(hasGithubToken
         ? { Authorization: `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}` }
         : {}),
-      "X-GitHub-Api-Version": "2022-11-28",
     },
   };
 }

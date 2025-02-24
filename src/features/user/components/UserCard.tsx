@@ -11,13 +11,13 @@ export const UserCard = ({ user, className }: UserCardProps) => {
         className,
       )}
     >
-      <div className="flex flex-col sm:flex-row sm:items-center">
+      <div className="flex flex-col sm:flex-row sm:items-center w-fit">
         <img
           src={user.avatar_url}
           alt={user.name}
-          className="aspect-square max-w-[min(100%,400px)]"
+          className="aspect-square flex-grow-0 sm:max-w-[50%]"
         />
-        <ol className="sm:px-6 [&>li]:py-2 [&>li]:flex [&>li]:flex-col [&>li]:items-baseline mt-6 sm:mt-0">
+        <ol className="sm:px-6 [&>li]:py-2 [&>li]:flex [&>li]:flex-col [&>li]:items-baseline mt-6 sm:mt-0 w-fit">
           <li>
             <h4 className="text-lg font-bold">Name:</h4>
             <span className="sm:ml-3 text-sunflare">{user.name}</span>

@@ -23,7 +23,8 @@ Features:
 
 The project is built with:
 
-- React + TypeScript
+- React 19
+- TypeScript
 - Tailwind CSS
 - Vite
 - [TanStack Router](https://tanstack.com/router/latest)

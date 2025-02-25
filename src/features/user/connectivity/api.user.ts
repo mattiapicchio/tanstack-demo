@@ -2,5 +2,5 @@ import { fetchRequest } from "@/connectivity/fetchRequest";
 import { User } from "./types.user";
 
 export function getOctocatUser() {
-  return fetchRequest<User>("octocat");
+  return fetchRequest<User>("users/octocat");
 }

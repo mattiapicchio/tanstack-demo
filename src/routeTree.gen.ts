@@ -13,6 +13,7 @@ import { createFileRoute } from '@tanstack/react-router'
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as IssuesImport } from './routes/issues'
 import { Route as IndexImport } from './routes/index'
 
 // Create Virtual Routes
@@ -26,6 +27,12 @@ const ReposLazyRoute = ReposLazyImport.update({
   path: '/repos',
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/repos.lazy').then((d) => d.Route))
+
+const IssuesRoute = IssuesImport.update({
+  id: '/issues',
+  path: '/issues',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const IndexRoute = IndexImport.update({
   id: '/',
@@ -44,6 +51,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
+    '/issues': {
+      id: '/issues'
+      path: '/issues'
+      fullPath: '/issues'
+      preLoaderRoute: typeof IssuesImport
+      parentRoute: typeof rootRoute
+    }
     '/repos': {
       id: '/repos'
       path: '/repos'
@@ -58,36 +72,41 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/issues': typeof IssuesRoute
   '/repos': typeof ReposLazyRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/issues': typeof IssuesRoute
   '/repos': typeof ReposLazyRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
+  '/issues': typeof IssuesRoute
   '/repos': typeof ReposLazyRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/repos'
+  fullPaths: '/' | '/issues' | '/repos'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/repos'
-  id: '__root__' | '/' | '/repos'
+  to: '/' | '/issues' | '/repos'
+  id: '__root__' | '/' | '/issues' | '/repos'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  IssuesRoute: typeof IssuesRoute
   ReposLazyRoute: typeof ReposLazyRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  IssuesRoute: IssuesRoute,
   ReposLazyRoute: ReposLazyRoute,
 }
 
@@ -102,11 +121,15 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
+        "/issues",
         "/repos"
       ]
     },
     "/": {
       "filePath": "index.tsx"
+    },
+    "/issues": {
+      "filePath": "issues.tsx"
     },
     "/repos": {
       "filePath": "repos.lazy.tsx"

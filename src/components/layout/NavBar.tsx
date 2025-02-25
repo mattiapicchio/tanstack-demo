@@ -16,6 +16,12 @@ export const NavBar = () => {
       >
         Repos
       </Link>
+      <Link
+        to={ROUTE_KEY.ISSUES}
+        className="[&.active]:text-voltgreen no-underline text-white"
+      >
+        Issues
+      </Link>
     </nav>
   );
 };

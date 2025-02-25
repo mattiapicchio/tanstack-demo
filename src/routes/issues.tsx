@@ -1,5 +1,6 @@
 import { ErrorPage } from "@/components/layout/ErrorPage";
 import FullscreenLoader from "@/components/layout/FullscreenLoader";
+import InlineLoader from "@/components/layout/inlineLoader";
 import { Listing } from "@/components/layout/Listing";
 import { IssuePreview } from "@/features/repo/component/IssuePreview";
 import { useInfiniteQueryDemoIssues } from "@/features/repo/connectivity/queries.repo";
@@ -45,13 +46,9 @@ function IssuesPage() {
           ListItemComponent={IssuePreview}
           listItemProp="issue"
         />
-
         <div ref={ref}>
-          {isFetchingNextPage
-            ? "Loading more..."
-            : hasNextPage
-              ? "Load Newer"
-              : "Nothing more to load"}
+          {isFetchingNextPage && <InlineLoader />}
+          {!hasNextPage && <div>Nothing more to load</div>}
         </div>
         <div>
           {isFetching && !isFetchingNextPage ? "Background Updating..." : null}

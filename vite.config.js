@@ -5,22 +5,22 @@ import { defineConfig } from "vite";
 const root = path.resolve(__dirname, "./src");
 const ReactCompilerConfig = { target: "19" };
 export default defineConfig({
-    resolve: {
-        alias: {
-            "@": root,
-        },
+  resolve: {
+    alias: {
+      "@": root,
     },
-    plugins: [
-        TanStackRouterVite({ autoCodeSplitting: true }),
-        react({
-            babel: {
-                plugins: [["babel-plugin-react-compiler", ReactCompilerConfig]],
-            },
-        }),
-        // React(),
-        // ...,
-    ],
-    server: {
-        port: 3000,
-    },
+  },
+  plugins: [
+    TanStackRouterVite({ autoCodeSplitting: true }),
+    react({
+      babel: {
+        plugins: [["babel-plugin-react-compiler", ReactCompilerConfig]],
+      },
+    }),
+    // React(),
+    // ...,
+  ],
+  server: {
+    port: 3000,
+  },
 });

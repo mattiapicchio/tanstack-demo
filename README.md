@@ -16,10 +16,12 @@ A demo project focused on implementing [TanStack Query](https://tanstack.com/que
 
 Features:
 
-- API fetch strategy
+- API fetch strategy with Tanstack Query
 - Client side data fetching
 - React Compiler
-- ... WIP
+- Infinite Scrolling with Intersection Observer
+- Error handling and loading states
+- File based routing
 
 The project is built with:
 
@@ -57,7 +59,7 @@ npm run build
 Locally preview production build:
 
 ```sh
-npm run start
+npm run preview
 ```
 
 ### Environment Variables
@@ -65,8 +67,8 @@ npm run start
 Create a `.env` file in the root of the project and add the following variables:
 
 ```sh
-VITE_API_URL=https://api.github.com/users/ # Required
-VITE_GITHUB_TOKEN=your_github_token # Optional, needed to avoid rate limiting
+VITE_API_URL=https://api.github.com/ # Required
+VITE_GITHUB_TOKEN=<your_github_token> # Optional, needed to avoid rate limiting
 ```
 
 ## Folder Structure

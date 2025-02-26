@@ -20,7 +20,7 @@ Features:
 - Client side data fetching
 - React Compiler
 - Infinite Scrolling with Intersection Observer
-- Error handling and loading states
+- Network Error handling and loading states
 - File based routing
 
 The project is built with:
